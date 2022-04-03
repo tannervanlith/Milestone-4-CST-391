@@ -1,0 +1,16 @@
+<form [formGroup]="appForm" (ngSubmit)="onSubmit(appForm.value)">
+    <div class="form-group">
+        <label>{{q1}}</label>
+        <input type="text" class="form-conrtol" formControlName="a1">
+        <br>
+        <label>{{q2}}</label>
+        <input type="text" class="form-conrtol" formControlName="a2">
+        <br>
+        <label>{{q3}}</label>
+        <input type="text" class="form-conrtol" formControlName="a3">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form><br>
+<label *ngIf="a1 != 'unknown'">Your New Task Title is: {{a1}}</label>
+
+

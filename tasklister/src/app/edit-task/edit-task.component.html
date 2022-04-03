@@ -1,0 +1,29 @@
+<div align="center">
+    <div class="card mb-6" style="max-width: 500px;">
+        <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.TASK }}</h5>
+                    <p class="card-text">{{ task.CLASS }}</p>
+                    <p class="card-text"><small class="text-muted">{{ task.DUEDATE }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form [formGroup]="appForm" (ngSubmit)="onSubmit(appForm.value)">
+    <div class="form-group">
+        <label>{{q1}}</label>
+        <input type="text" class="form-conrtol" formControlName="a1" [(ngModel)]="task.TASK">
+    </div>
+    <div class="form-group">
+        <label>{{q2}}</label>
+        <input type="text" class="form-conrtol" formControlName="a2" [(ngModel)]="task.CLASS">
+    </div>
+    <div class="form-group">
+        <label>{{q3}}</label>
+        <input type="text" class="form-conrtol" formControlName="a3" [(ngModel)]="task.DUEDATE">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form><br>

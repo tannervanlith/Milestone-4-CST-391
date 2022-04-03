@@ -1,0 +1,25 @@
+<div align="center">
+    <div class="card mb-6" style="max-width: 500px;">
+        <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.TASK }}</h5>
+                    <p class="card-text">{{ task.CLASS }}</p>
+                    <p class="card-text"><small class="text-muted">{{ task.DUEDATE }}</small></p>
+                        <table>
+                            <tr>
+                                <td width="50px" align="center">
+                                    <a [routerLink]="['/edit', task.tID]"><i class="fa fa-edit"></i></a>
+                                </td>
+                                <td width="50px" align="center">
+                                    <a [routerLink]="['/delete', task.tID]"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
